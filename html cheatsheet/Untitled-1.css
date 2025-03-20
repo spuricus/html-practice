@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dancing Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+        }
+        .dance-floor {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        .dancer {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: #f39c12;
+            border-radius: 50px 50px 0 0;
+            bottom: 0;
+            animation: dance 1s infinite alternate ease-in-out;
+        }
+        .dancer:nth-child(2) {
+            left: 100px;
+            background-color: #3498db;
+            animation-delay: 0.5s;
+        }
+        @keyframes dance {
+            0% {
+                transform: rotate(-10deg) translateY(0);
+            }
+            100% {
+                transform: rotate(10deg) translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dance-floor">
+        <div class="dancer"></div>
+        <div class="dancer"></div>
+    </div>
+</body>
+</html>
